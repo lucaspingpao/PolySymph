@@ -106,14 +106,19 @@ A4_trumpet = createNote(noteName="A4", type="trumpet", amp=1.0, beats=4.0, filte
 A4_distorted = A4_trumpet[:len(A4_trumpet)].overlay(A4_trumpet[:len(A4_trumpet)])
 A4_highPass = createNote(noteName="A4", type="trumpet", amp=1.0, beats=4.0, filter="highPass", cutoff=5000)
 
-play(A4)
+# play(A4)
 # play(A4_trumpet)
 # play(A4_distorted)
 # play(A4_highPass)
-A4.export("A4demo.mp3")
+C4 = createNote("C4")
+D4 = createNote("D4")
+E4 = createNote("E4")
+C4.export("C4.mp3")
+D4.export("D4.mp3")
+E4.export("E4.mp3")
 otherNotes = A4_trumpet + A4_distorted + A4_highPass
-play(otherNotes)
-otherNotes.export("otherNotes.mp3")
+# play(otherNotes)
+# otherNotes.export("otherNotes.mp3")
 
 # Envelopes
 # .fade_in and .fade_out serve as crossfaders for DJs in combining multiple audio signals
