@@ -103,7 +103,7 @@ Keras-Preprocessing==1.1.2
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 libarchive-c==2.9
-llvmlite==0.33.0+1.g022ab0f
+# llvmlite==0.33.0+1.g022ab0f
 locket==0.2.0
 # lxml @ file:///opt/concourse/worker/volumes/live/d42457f0-83be-4fb6-6c8d-8f9319a861b0/volume/lxml_1594826854945/work
 Markdown @ file:///home/conda/feedstock_root/build_artifacts/markdown_1603668500820/work
