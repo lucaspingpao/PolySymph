@@ -24,7 +24,7 @@ def after_request(response):
 
 
 @app.route('/', methods=["GET", "POST"])
-def homepage():
+def index():
     errorMessage = ""
     validNotes = ["A", "B", "C", "D", "E", "F", "G", "Ab", "Bb", "Db", "Eb", "Gb"]
     validChords = []
@@ -34,7 +34,7 @@ def homepage():
         validChords.append(note + "Minor")
     
     if request.method == "GET":
-        return render_template("homepage.html", error=errorMessage)
+        return render_template("index.html", error=errorMessage)
     if request.method == "POST":
         
         melodyInstrument = request.form.get('melodyInstrument')
@@ -62,10 +62,10 @@ def homepage():
         for note in noteNames:
             if not note:
                 errorMessage = "Missing input(s). Please type in a note. e.g. A or Ab."
-                return render_template("homepage.html", error=errorMessage)
+                return render_template("index.html", error=errorMessage)
             if note not in validNotes:
                 errorMessage = "Please type in a valid note. e.g. A or Ab."
-                return render_template("homepage.html", error=errorMessage)
+                return render_template("index.html", error=errorMessage)
             notes.append(note + str(5))
         
         harmony = [
@@ -90,17 +90,17 @@ def homepage():
         for chord in harmony:
             if chord == "Major" or chord == "Minor":
                 errorMessage = "Missing input(s). Please type in a note. e.g. A or Ab."
-                return render_template("homepage.html", error=errorMessage)
+                return render_template("index.html", error=errorMessage)
             if chord not in validChords:
                 errorMessage = "Please type in a valid note. e.g. A or Ab."
-                return render_template("homepage.html", error=errorMessage)
+                return render_template("index.html", error=errorMessage)
         
         songTitle = request.form.get('songTitle')
         
         song = mixTracks(notes, harmony, melodyInstrument, harmonyInstrument)
         song.export('./static/audio/mySong.mp3')
         
-        return render_template("homepage.html", error=errorMessage, title=songTitle)
+        return render_template("index.html", error=errorMessage, title=songTitle)
 
 @app.route('/about')
 def about():
