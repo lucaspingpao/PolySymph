@@ -106,7 +106,7 @@ libarchive-c==2.9
 # llvmlite==0.33.0+1.g022ab0f
 locket==0.2.0
 # lxml @ file:///opt/concourse/worker/volumes/live/d42457f0-83be-4fb6-6c8d-8f9319a861b0/volume/lxml_1594826854945/work
-Markdown @ file:///home/conda/feedstock_root/build_artifacts/markdown_1603668500820/work
+# Markdown @ file:///home/conda/feedstock_root/build_artifacts/markdown_1603668500820/work
 # MarkupSafe @ file:///opt/concourse/worker/volumes/live/cb778296-98db-45ad-411e-6f726e102dc3/volume/markupsafe_1594371638608/work
 # matplotlib @ file:///opt/concourse/worker/volumes/live/59859a4b-794b-4c9f-51fd-a0ac1d1ab595/volume/matplotlib-base_1592846058943/work
 mccabe==0.6.1
